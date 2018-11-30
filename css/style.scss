@@ -6,7 +6,7 @@
 
 
 body {
-    background: #AFAFAF;
+    background: $medium-grey;
     margin: 0 auto;
     color: #000;
     height: 100%;
@@ -36,7 +36,8 @@ a:hover, a:focus {
 }
 
 .content {
-	background: $primary;
+	background: $light-grey;
+	padding: $padding-m;
 }
 
 
