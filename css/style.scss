@@ -1,0 +1,54 @@
+// Utilities
+@import "variables";
+@import "fonts";
+
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+body {
+    background: #AFAFAF;
+    margin: 0 auto;
+    color: #000;
+    height: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font: 100% / 1.5 "HTWBerlin", Helvetica, sans-serif !important;
+    text-rendering: optimizeLegibility;
+    -moz-font-feature-settings: "kern";
+    -webkit-font-feature-settings: "kern";
+    font-feature-settings: "kern"
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover, a:focus {
+
+}
+
+.container {
+	margin: 0 auto;
+	text-align: center;
+	overflow: hidden;
+}
+
+.content {
+	background: $primary;
+}
+
+
+
+@media screen and (max-width: 50em) {
+	.codrops-header {
+		padding: 3em 10% 4em;
+	}
+}
+
+@media screen and (max-width: 40em) {
+	.codrops-header h1 {
+		font-size: 2.8em;
+	}
+}
