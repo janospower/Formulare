@@ -4,12 +4,29 @@
 	position: relative;
 	z-index: 1;
 	display: block;
-	margin: 1em;
-	max-width: 400px;
-	width: calc(100% - 2em);
+	margin-bottom: $padding-l;
+	// max-width: 400px;
+	width: 100%;
 	vertical-align: top;
 	font-size: 20px;
 	line-height: 1;
+}
+
+.half {
+	width: 50%;
+}
+
+.with-extra {
+	width: calc(80% - 30px);
+	margin-right: $padding-m;
+}
+
+.extra {
+	width: 20%;
+}
+
+.multi {
+	display: flex;
 }
 
 .input__field {
@@ -19,7 +36,7 @@
 	padding: 0.8em;
 	width: 60%;
 	border: none;
-	border-radius: 0;
+	border-radius: 2px;
 	background: #f0f0f0;
 	color: #aaa;
 	font-weight: bold;
@@ -112,6 +129,7 @@
 .input__field--juro:focus + .input__label--juro .input__label-content--juro,
 .input--filled .input__label--juro .input__label-content--juro {
 	color: #fff;
+	text-transform: uppercase;
 	-webkit-transform: translate3d(0, -1.5em, 0) scale3d(0.75, 0.75, 1);
 	transform: translate3d(0, -1.5em, 0) scale3d(0.75, 0.75, 1) translateZ(1px);
 }

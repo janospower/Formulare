@@ -20,21 +20,21 @@
 		<div class="container">
 			<section class="content">
 				<span class="input input--juro">
-					<input class="input__field input__field--juro" type="text" id="vorname" />
+					<input class="input__field input__field--juro" type="text" id="vorname" spellcheck="false" autocorrect="off" />
 					<label class="input__label input__label--juro" for="vorname">
 						<span class="input__label-content input__label-content--juro">Vorname</span>
 					</label>
 				</span>
 
 				<span class="input input--juro">
-					<input class="input__field input__field--juro" type="text" id="nachname" />
+					<input class="input__field input__field--juro" type="text" id="nachname" spellcheck="false" autocorrect="off"  />
 					<label class="input__label input__label--juro" for="nachname">
 						<span class="input__label-content input__label-content--juro">Nachname</span>
 					</label>
 				</span>
 
-				<span class="input input--juro">
-					<input class="input__field input__field--juro" type="text" id="Matrikelnummer" />
+				<span class="input input--juro half">
+					<input class="input__field input__field--juro" type="number" id="Matrikelnummer" spellcheck="false" autocorrect="off"  />
 					<label class="input__label input__label--juro" for="Matrikelnummer">
 						<span class="input__label-content input__label-content--juro">Matrikelnummer</span>
 					</label>
@@ -48,20 +48,31 @@
 				</span>
 
 				<span class="input input--juro">
-					<input class="input__field input__field--juro" type="text" id="Geburtsdatum" />
+					<input class="input__field input__field--juro" type="date" id="Geburtsdatum" />
 					<label class="input__label input__label--juro" for="Geburtsdatum">
 						<span class="input__label-content input__label-content--juro">Geburtsdatum</span>
 					</label>
 				</span>
 
-				<span class="input input--juro">
-					<input class="input__field input__field--juro" type="text" id="Straße" />
-					<label class="input__label input__label--juro" for="Straße">
-						<span class="input__label-content input__label-content--juro">Straße</span>
-					</label>
-				</span>
+				<div class="multi">
 
-				<span class="input input--juro">
+					<span class="input input--juro with-extra">
+						<input class="input__field input__field--juro" type="text" id="Straße" spellcheck="false" autocorrect="off"  />
+						<label class="input__label input__label--juro" for="Straße">
+							<span class="input__label-content input__label-content--juro">Straße</span>
+						</label>
+					</span>
+
+					<span class="input input--juro extra">
+						<input class="input__field input__field--juro" type="text" id="Hausnummer" />
+						<label class="input__label input__label--juro" for="Hausnummer">
+							<span class="input__label-content input__label-content--juro">Hausnummer</span>
+						</label>
+					</span>
+
+				</div>
+
+				<span class="input input--juro half">
 					<input class="input__field input__field--juro" type="text" id="Postleitzahl" />
 					<label class="input__label input__label--juro" for="Postleitzahl">
 						<span class="input__label-content input__label-content--juro">Postleitzahl</span>
