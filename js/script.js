@@ -10,9 +10,10 @@
     })();
   }
 
-  [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+  [].slice.call( document.getElementsByClassName( 'input__field' ) ).forEach( function( inputEl ) {
+    console.log(inputEl.value.trim());
     // in case the input is already filled..
-    if( inputEl.value.trim() !== '' ) {
+    if( inputEl.value.trim() !== '' && inputEl.value.trim() !== 'Geschlecht' ) {
       classie.add( inputEl.parentNode, 'input--filled' );
     }
 
@@ -22,15 +23,18 @@
   } );
 
   function onInputFocus( ev ) {
+    classie.add( ev.target.parentNode, 'input--focus' );
   }
 
   function onInputBlur( ev ) {
-    if( ev.target.value.trim() === '' ) {
+    if( ev.target.value.trim() === '' || ev.target.value.trim() === 'Geschlecht' ) {
       classie.remove( ev.target.parentNode, 'input--filled' );
+      classie.remove( ev.target.parentNode, 'input--focus' );
       classie.add( ev.target.parentNode, 'input--filled--empty' );
     }
     else {
       classie.remove( ev.target.parentNode, 'input--filled--empty' );
+      classie.remove( ev.target.parentNode, 'input--focus' );
       classie.add( ev.target.parentNode, 'input--filled' );
     }
   }

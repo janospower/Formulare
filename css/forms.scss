@@ -119,40 +119,15 @@
 	transition: border-width 0.3s, border-color 0.3s;
 }
 
-.input__field--juro:focus + .input__label--juro::before {
-	border-width: 8px;
-	border-color: $dark-grey;
-	border-top-width: 2em;
-}
-.input--filled .input__label--juro::before {
-	border-width: 8px;
-	border-color: $primary;
-	border-top-width: 2em;
-}
-
-.input--filled--empty .input__label--juro::before {
-	border-width: 8px;
-	border-color: $warning;
-	border-top-width: 2em;
-}
-
 .input__field--juro:focus + .input__label--juro .input__label-content--juro,
 .input--filled .input__label--juro .input__label-content--juro {
-	color: #fff;
-	text-transform: uppercase;
-	letter-spacing: $letter-spacing;
-	font-weight: 600;
-	-webkit-transform: translate3d(0, -1.5em, 0) scale3d(0.75, 0.75, 1);
-	transform: translate3d(0, -1.5em, 0) scale3d(0.75, 0.75, 1) translateZ(1px);
+	-webkit-transform: translate3d(0, -1em, 0) scale3d(0.75, 0.75, 1);
+	transform: translate3d(0, -1em, 0) scale3d(0.75, 0.75, 1) translateZ(1px);
 }
 
 .input--filled--empty .input__label--juro .input__label-content--juro {
-	color: #fff;
-	text-transform: uppercase;
-	letter-spacing: $letter-spacing;
-	font-weight: 600;
-	-webkit-transform: translate3d(0, -1.5em, 0) scale3d(0.75, 0.75, 1);
-	transform: translate3d(0, -1.5em, 0) scale3d(0.75, 0.75, 1) translateZ(1px);
+	-webkit-transform: translate3d(0, -1em, 0) scale3d(0.75, 0.75, 1);
+	transform: translate3d(0, -1em, 0) scale3d(0.75, 0.75, 1) translateZ(1px);
 }
 
 .select--style {
@@ -167,7 +142,7 @@
 		color: $dark-grey;
 		font-weight: bold;
 		padding: 2em 1em;
-    width: 130%;
+    width: 100%;
     border: none;
 		line-height: 1;
     box-shadow: none;
@@ -178,4 +153,15 @@
 
 .select--style select:focus {
     outline: none;
+}
+
+.input__field--juro:focus + .input__label--juro::before, .input--focus {
+	border-color: $black;
+}
+.input--filled .input__label--juro::before, .input--filled {
+	border-color: $primary;
+}
+
+.input--filled--empty .input__label--juro::before, .input--filled--empty {
+	border-color: $warning;
 }
