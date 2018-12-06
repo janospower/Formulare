@@ -35,7 +35,13 @@
 				</span>
 
 				<span class="input input--juro half">
-					<input class="input__field input__field--juro" type="number" id="Matrikelnummer" spellcheck="false" autocorrect="off"  />
+					<input
+						class="input__field input__field--juro"
+						type="number" id="Matrikelnummer"
+						spellcheck="false"
+						autocorrect="off"
+						placeholder="123456"
+					/>
 					<label class="input__label input__label--juro" for="Matrikelnummer">
 						<span class="input__label-content input__label-content--juro">Matrikelnummer</span>
 					</label>
@@ -51,7 +57,21 @@
 				</div>
 
 				<span class="input input--juro">
-					<input class="input__field input__field--juro" type="date" id="Geburtsdatum" />
+					<input
+							class="input__field input__field--juro"
+							id="Geburtsdatum"
+					    type="text"
+					    name="date"
+					    placeholder="dd/mm/yyyy"
+					    onkeyup="
+					        var v = this.value;
+					        if (v.match(/^\d{2}$/) !== null) {
+					            this.value = v + '/';
+					        } else if (v.match(/^\d{2}\/\d{2}$/) !== null) {
+					            this.value = v + '/';
+					        }"
+					    maxlength="10"
+					>
 					<label class="input__label input__label--juro" for="Geburtsdatum">
 						<span class="input__label-content input__label-content--juro">Geburtsdatum</span>
 					</label>
@@ -76,7 +96,12 @@
 				</div>
 
 				<span class="input input--juro half">
-					<input class="input__field input__field--juro" type="text" id="Postleitzahl" />
+					<input
+						class="input__field input__field--juro"
+						type="text"
+						id="Postleitzahl"
+						placeholder="11111"
+					/>
 					<label class="input__label input__label--juro" for="Postleitzahl">
 						<span class="input__label-content input__label-content--juro">Postleitzahl</span>
 					</label>

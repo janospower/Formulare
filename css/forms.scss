@@ -12,6 +12,22 @@
 	line-height: 1;
 }
 
+.input input::-webkit-input-placeholder { /* WebKit browsers */
+		color: transparent;
+}
+.input--focus input::-webkit-input-placeholder { /* WebKit browsers */
+		color: $darkish-grey;
+}
+// :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+// 	 color: transparent;
+// }
+// ::-moz-placeholder { /* Mozilla Firefox 19+ */
+// 	 color: transparent;
+// }
+// :-ms-input-placeholder { /* Internet Explorer 10+ */
+// 	 color: transparent;
+// }
+
 .half {
 	width: 50%;
 }
@@ -119,17 +135,6 @@
 	transition: border-width 0.3s, border-color 0.3s;
 }
 
-.input__field--juro:focus + .input__label--juro .input__label-content--juro,
-.input--filled .input__label--juro .input__label-content--juro {
-	-webkit-transform: translate3d(0, -1em, 0) scale3d(0.75, 0.75, 1);
-	transform: translate3d(0, -1em, 0) scale3d(0.75, 0.75, 1) translateZ(1px);
-}
-
-.input--filled--empty .input__label--juro .input__label-content--juro {
-	-webkit-transform: translate3d(0, -1em, 0) scale3d(0.75, 0.75, 1);
-	transform: translate3d(0, -1em, 0) scale3d(0.75, 0.75, 1) translateZ(1px);
-}
-
 .select--style {
     border: 0px;
     overflow: hidden;
@@ -164,4 +169,17 @@
 
 .input--filled--empty .input__label--juro::before, .input--filled--empty {
 	border-color: $warning;
+}
+
+.input__field--juro:focus + .input__label--juro .input__label-content--juro,
+.input--filled .input__label--juro .input__label-content--juro {
+	-webkit-transform: translate3d(0, -1em, 0) scale3d(0.75, 0.75, 1);
+	transform: translate3d(0, -1em, 0) scale3d(0.75, 0.75, 1) translateZ(1px);
+	color: $dark-grey;
+}
+
+.input--filled--empty .input__label--juro .input__label-content--juro {
+	-webkit-transform: translate3d(0, -1em, 0) scale3d(0.75, 0.75, 1);
+	transform: translate3d(0, 0, 0) scale3d(1, 1, 1) translateZ(0);
+	color: $warning;
 }
