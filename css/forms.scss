@@ -17,7 +17,7 @@
 }
 
 .with-extra {
-	width: calc(80% - 30px);
+	width: calc(80% - 15px);
 	margin-right: $padding-m;
 }
 
@@ -38,7 +38,7 @@
 	border: none;
 	border-radius: 2px;
 	background: #f0f0f0;
-	color: #aaa;
+	color: $dark-grey;
 	font-weight: bold;
 	-webkit-appearance: none; /* for box shadows to show on iOS */
 }
@@ -119,10 +119,20 @@
 	transition: border-width 0.3s, border-color 0.3s;
 }
 
-.input__field--juro:focus + .input__label--juro::before,
+.input__field--juro:focus + .input__label--juro::before {
+	border-width: 8px;
+	border-color: $dark-grey;
+	border-top-width: 2em;
+}
 .input--filled .input__label--juro::before {
 	border-width: 8px;
 	border-color: $primary;
+	border-top-width: 2em;
+}
+
+.input--filled--empty .input__label--juro::before {
+	border-width: 8px;
+	border-color: $warning;
 	border-top-width: 2em;
 }
 
@@ -130,6 +140,38 @@
 .input--filled .input__label--juro .input__label-content--juro {
 	color: #fff;
 	text-transform: uppercase;
+	letter-spacing: $letter-spacing;
+	font-weight: 600;
 	-webkit-transform: translate3d(0, -1.5em, 0) scale3d(0.75, 0.75, 1);
 	transform: translate3d(0, -1.5em, 0) scale3d(0.75, 0.75, 1) translateZ(1px);
+}
+
+.input--filled--empty .input__label--juro .input__label-content--juro {
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: $letter-spacing;
+	font-weight: 600;
+	-webkit-transform: translate3d(0, -1.5em, 0) scale3d(0.75, 0.75, 1);
+	transform: translate3d(0, -1.5em, 0) scale3d(0.75, 0.75, 1) translateZ(1px);
+}
+
+.select-style {
+    border: 0px;
+    overflow: hidden;
+		font-size: 0.85em;
+    background: $white url("img/icon-select.png") no-repeat 90% 50%;
+}
+
+.select-style select {
+		padding: 1em 1em;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+}
+
+.select-style select:focus {
+    outline: none;
 }

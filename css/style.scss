@@ -6,9 +6,9 @@
 
 
 body {
-    background: $medium-grey;
+    background: $white;//$medium-grey;
     margin: 0 auto;
-    color: #000;
+    color: $black;
     height: 100%;
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
@@ -18,6 +18,11 @@ body {
     -moz-font-feature-settings: "kern";
     -webkit-font-feature-settings: "kern";
     font-feature-settings: "kern"
+}
+
+h1, h2, h3 {
+	font-weight: 600;
+	font-size: 31px;
 }
 
 a {
@@ -31,7 +36,7 @@ a:hover, a:focus {
 
 .container {
 	margin: 0 auto;
-	text-align: center;
+	width: 800px;
 	overflow: hidden;
 }
 
