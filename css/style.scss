@@ -6,7 +6,7 @@
 
 
 body {
-    background: $white;//$medium-grey;
+    background: $light-grey;
     margin: 0 auto;
     color: $black;
     height: 100%;
@@ -22,7 +22,9 @@ body {
 
 h1, h2, h3 {
 	font-weight: 600;
-	font-size: 31px;
+	// font-size: 31px;
+  margin: -10px 0px 0px 0px;
+  // display: inline-block;
 }
 
 a {
@@ -35,13 +37,25 @@ a:hover, a:focus {
 }
 
 .container {
-	margin: 0 auto;
-	width: 800px;
+  background: $white;
+	margin: 40px auto;
+  border-radius: $border-radius;
+	width: 890px;
 	overflow: hidden;
+  padding: $padding-l;
 }
 
 .content {
-	padding: $padding-m;
+	// padding: $padding-m;
+  margin-top: $padding-l;
+  grid-template-columns: 50px auto 50px;
+  display: grid;
+}
+
+section {
+  border-left: $padding-s solid $black;
+  padding-left: $padding-m;
+  margin-top: $padding-m;
 }
 
 
