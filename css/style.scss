@@ -27,6 +27,10 @@ h1, h2, h3 {
   // display: inline-block;
 }
 
+h1 {
+  margin-left: $grid;
+}
+
 a {
 	text-decoration: none;
 	outline: none;
@@ -48,12 +52,12 @@ a:hover, a:focus {
 .content {
 	// padding: $padding-m;
   margin-top: $padding-l;
-  grid-template-columns: 50px auto 50px;
+  grid-template-columns: $grid auto $grid;
   display: grid;
 }
 
 section {
-  border-left: $padding-s solid $black;
+  border-left: $padding-xs solid $black;
   padding-left: $padding-m;
   margin-top: $padding-m;
 }

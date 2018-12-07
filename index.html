@@ -25,14 +25,27 @@
 					<h2>Kontaktdaten</h2>
 					<section>
 						<span class="input input--juro">
-							<input class="input__field input__field--juro" type="text" id="vorname" spellcheck="false" autocorrect="off" />
+							<input
+								class="input__field input__field--juro"
+								type="text"
+								id="vorname"
+								spellcheck="false"
+								autocorrect="off"
+								autofocus
+							/>
 							<label class="input__label input__label--juro" for="vorname">
 								<span class="input__label-content input__label-content--juro">Vorname</span>
 							</label>
 						</span>
 
 						<span class="input input--juro">
-							<input class="input__field input__field--juro" type="text" id="nachname" spellcheck="false" autocorrect="off"  />
+							<input
+								class="input__field input__field--juro"
+								type="text"
+								id="nachname"
+								spellcheck="false"
+								autocorrect="off"
+							/>
 							<label class="input__label input__label--juro" for="nachname">
 								<span class="input__label-content input__label-content--juro">Nachname</span>
 							</label>
@@ -41,10 +54,12 @@
 						<span class="input input--juro half">
 							<input
 								class="input__field input__field--juro"
-								type="number" id="Matrikelnummer"
+								type="number"
+								id="Matrikelnummer"
 								spellcheck="false"
 								autocorrect="off"
 								placeholder="123456"
+								maxlength="6"
 							/>
 							<label class="input__label input__label--juro" for="Matrikelnummer">
 								<span class="input__label-content input__label-content--juro">Matrikelnummer</span>
@@ -84,14 +99,23 @@
 						<div class="multi">
 
 							<span class="input input--juro with-extra">
-								<input class="input__field input__field--juro" type="text" id="Straße" spellcheck="false" autocorrect="off"  />
+								<input
+									class="input__field input__field--juro"
+									type="text"
+									id="Straße"
+									spellcheck="false"
+									autocorrect="off"
+								/>
 								<label class="input__label input__label--juro" for="Straße">
 									<span class="input__label-content input__label-content--juro">Straße</span>
 								</label>
 							</span>
 
 							<span class="input input--juro extra">
-								<input class="input__field input__field--juro" type="number" id="Hausnummer" />
+								<input
+									class="input__field input__field--juro"
+									type="number"
+									id="Hausnummer" />
 								<label class="input__label input__label--juro" for="Hausnummer">
 									<span class="input__label-content input__label-content--juro">Hausnummer</span>
 								</label>
@@ -114,6 +138,55 @@
 
 				</div>
 			</div>
+
+
+
+			<div class="content">
+				<h2>2.</h2>
+				<div class="form">
+					<h2>Bankverbindung</h2>
+					<section>
+
+						<span class="input input--juro">
+							<input
+								class="input__field input__field--juro"
+								type="text"
+								id="IBAN"
+								placeholder="DE12 1234 1234 12"
+								style="text-transform:uppercase"
+								onkeyup="
+									this.value = this.value.replace(/[^\dA-Z]/g, '').replace(/(.{4})/g, '$1 ').trim();
+									if(this.value.length > 16) {
+										document.getElementById('BIC').focus();
+										document.getElementById('BIC').value = 'PBNKDEFF';
+									};
+									"
+							/>
+							<label class="input__label input__label--juro" for="IBAN">
+								<span class="input__label-content input__label-content--juro">IBAN</span>
+							</label>
+						</span>
+
+						<span class="input input--juro half">
+							<input
+								class="input__field input__field--juro"
+								type="text"
+								id="BIC"
+								placeholder="PBNKDEFF"
+								style="text-transform:uppercase"
+							/>
+							<label class="input__label input__label--juro" for="BIC">
+								<span class="input__label-content input__label-content--juro">BIC</span>
+							</label>
+						</span>
+
+					</section>
+				</div>
+			</div>
+
+
+
+
 		</div><!-- /container -->
 		<script src="js/classie.js" type="text/javascript"></script>
 		<script src="js/script.js" type="text/javascript"></script>
