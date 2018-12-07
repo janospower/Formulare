@@ -31,6 +31,10 @@
 								id="vorname"
 								spellcheck="false"
 								autocorrect="off"
+								onblur="
+									document.getElementById('Kontoinhaber').value = this.value;
+									document.getElementById('Kontoinhaber').parentNode.className += ' input--filled';
+									"
 								autofocus
 							/>
 							<label class="input__label input__label--juro" for="vorname">
@@ -45,6 +49,9 @@
 								id="nachname"
 								spellcheck="false"
 								autocorrect="off"
+								onblur="
+									document.getElementById('Kontoinhaber').value += ' ' + this.value;
+									"
 							/>
 							<label class="input__label input__label--juro" for="nachname">
 								<span class="input__label-content input__label-content--juro">Nachname</span>
@@ -126,12 +133,23 @@
 						<span class="input input--juro half">
 							<input
 								class="input__field input__field--juro"
-								type="text"
+								type="number"
 								id="Postleitzahl"
 								placeholder="11111"
 							/>
 							<label class="input__label input__label--juro" for="Postleitzahl">
 								<span class="input__label-content input__label-content--juro">Postleitzahl</span>
+							</label>
+						</span>
+
+						<span class="input input--juro">
+							<input
+								class="input__field input__field--juro"
+								type="text"
+								id="Ort"
+							/>
+							<label class="input__label input__label--juro" for="Ort">
+								<span class="input__label-content input__label-content--juro">Ort</span>
 							</label>
 						</span>
 					</section>
@@ -159,6 +177,8 @@
 									if(this.value.length > 16) {
 										document.getElementById('BIC').focus();
 										document.getElementById('BIC').value = 'PBNKDEFF';
+										document.getElementById('Geldinstitut').focus();
+										document.getElementById('Geldinstitut').value = 'Postbank';
 									};
 									"
 							/>
@@ -177,6 +197,28 @@
 							/>
 							<label class="input__label input__label--juro" for="BIC">
 								<span class="input__label-content input__label-content--juro">BIC</span>
+							</label>
+						</span>
+
+						<span class="input input--juro">
+							<input
+								class="input__field input__field--juro"
+								type="text"
+								id="Geldinstitut"
+							/>
+							<label class="input__label input__label--juro" for="Geldinstitut">
+								<span class="input__label-content input__label-content--juro">Geldinstitut</span>
+							</label>
+						</span>
+
+						<span class="input input--juro">
+							<input
+								class="input__field input__field--juro"
+								type="text"
+								id="Kontoinhaber"
+							/>
+							<label class="input__label input__label--juro" for="Kontoinhaber">
+								<span class="input__label-content input__label-content--juro">Kontoinhaber</span>
 							</label>
 						</span>
 

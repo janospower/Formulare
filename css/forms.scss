@@ -1,5 +1,12 @@
 @import "variables";
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
 .input {
 	position: relative;
 	z-index: 1;
@@ -30,6 +37,7 @@
 
 .half {
 	width: 50%;
+	display: inline-block;
 }
 
 .with-extra {
@@ -139,7 +147,7 @@
     border: 0px;
     overflow: hidden;
 		font-size: 0.85em;
-    background: $white url("img/icon-select.png") no-repeat 90% 50%;
+    background: $white url("../img/icon-select.svg") no-repeat 100% 50%;
 		border: 1px solid $light-grey;
 }
 
