@@ -47,6 +47,10 @@ window.onscroll = function() {myFunction()};
 
 // Get the navbar
 var navbar = document.getElementById("navbar");
+var number = document.getElementById("number");
+var title = document.getElementById("title");
+
+var two = document.getElementById("2");
 
 // Get the offset position of the navbar
 var sticky = navbar.offsetTop;
@@ -57,5 +61,13 @@ function myFunction() {
     navbar.classList.add("sticky")
   } else {
     navbar.classList.remove("sticky");
+  }
+  if (window.pageYOffset < two.offsetTop) {
+    number.innerHTML = "1";
+    title.innerHTML = "Kontaktdaten";
+  }
+  else if (window.pageYOffset >= two.offsetTop) {
+    number.innerHTML = "2";
+    title.innerHTML = "Bankverbindung";
   }
 }
