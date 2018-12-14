@@ -68,8 +68,24 @@ a:hover, a:focus {
 .sticky {
   z-index: 500;
   background: $white;
-  padding: $padding-m 0px;
-  width: 850px;
+  padding: $padding-m 0px 0px 0px;
+  width: 900px;
+}
+#navbar div {
+  visibility: hidden;
+  height: 0px;
+  margin-top: -15px;
+}
+#navbar h2 {
+  margin-bottom: 0px;
+}
+#navbar section {
+  height: 41px;
+}
+.sticky div {
+  visibility: visible!important;
+  height: auto!important;
+  margin-top: 0px!important;
 }
 
 .content {
