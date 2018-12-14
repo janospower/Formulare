@@ -62,7 +62,7 @@ input::-webkit-inner-spin-button {
 	border: none;
 	border-radius: 2px;
 	background: #f0f0f0;
-	color: $dark-grey;
+	color: $black;
 	font-weight: bold;
 	-webkit-appearance: none; /* for box shadows to show on iOS */
 }
@@ -76,9 +76,9 @@ input::-webkit-inner-spin-button {
 	float: right;
 	padding: 0 1em;
 	width: 40%;
-	color: $dark-grey;
-	font-weight: bold;
-	font-size: 70.25%;
+	color: $black;
+	font-weight: 400;
+	font-size: 0.85em;
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 	-webkit-touch-callout: none;
@@ -107,7 +107,7 @@ input::-webkit-inner-spin-button {
 .input__field--juro {
 	position: absolute;
 	z-index: 100;
-	padding: 2.15em 0.75em 0;
+	padding: 1.9em 1em 0;
 	width: 100%;
 	background: transparent;
 	font-size: 0.85em;
@@ -139,6 +139,7 @@ input::-webkit-inner-spin-button {
 	width: 100%;
 	height: 100%;
 	border: 1px solid $light-grey;
+	border-radius: $border-radius-s;
 	-webkit-transition: border-width 0.3s, border-color 0.3s;
 	transition: border-width 0.3s, border-color 0.3s;
 }
@@ -181,13 +182,18 @@ input::-webkit-inner-spin-button {
 
 .input__field--juro:focus + .input__label--juro .input__label-content--juro,
 .input--filled .input__label--juro .input__label-content--juro {
-	-webkit-transform: translate3d(0, -1em, 0) scale3d(0.75, 0.75, 1);
-	transform: translate3d(0, -1em, 0) scale3d(0.75, 0.75, 1) translateZ(1px);
+	// -webkit-transform: translate3d(0, -1em, 0) scale3d(0.75, 0.75, 1);
+	transform: $label-transform-to;
 	color: $dark-grey;
 }
 
 .input--filled--empty .input__label--juro .input__label-content--juro {
-	-webkit-transform: translate3d(0, -1em, 0) scale3d(0.75, 0.75, 1);
-	transform: translate3d(0, 0, 0) scale3d(1, 1, 1) translateZ(0);
+	// -webkit-transform: translate3d(0, -1em, 0) scale3d(0.75, 0.75, 1);
+	transform: $label-transform-from;
 	color: $warning;
+}
+
+.radio {
+	// display: inline-block;
+
 }

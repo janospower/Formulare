@@ -8,14 +8,18 @@ $dark-grey: #383838;
 $black: black;
 $warning: #BA4100;
 
-$padding-xs: 4px;
+$padding-xs: 3px;
 $padding-s: 8px;
 $padding-m: 15px;
 $padding-l: 30px;
 $padding-xl: 60px;
 
-$border-radius: 8px;
+$border-radius: 20px;
+$border-radius-s: 3.5px;
 
 $grid: 50px;
 
 $letter-spacing: 1px;
+
+$label-transform-from: translate3d(0, 0, 0) scale3d(1, 1, 1) translateZ(0);
+$label-transform-to: translate3d(0.25em, -1.1em, 0) scale3d(0.75, 0.75, 1) translateZ(1px);

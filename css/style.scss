@@ -23,12 +23,24 @@ body {
 h1, h2, h3 {
 	font-weight: 600;
 	// font-size: 31px;
-  margin: -10px 0px 0px 0px;
+  margin: -10px 0px 21px 0px;
   // display: inline-block;
 }
 
 h1 {
-  margin-left: $grid;
+  margin-left: 68px;
+  margin-bottom: $padding-l;
+}
+
+.number {
+  font-size: 2em;
+  line-height: 1.3;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 a {
@@ -44,9 +56,20 @@ a:hover, a:focus {
   background: $white;
 	margin: 40px auto;
   border-radius: $border-radius;
-	width: 890px;
+	width: 1000px;
 	overflow: hidden;
   padding: $padding-l;
+}
+
+.sticky + .content {
+  padding-top: 30px;
+}
+
+.sticky {
+  z-index: 500;
+  background: $white;
+  padding: $padding-m 0px;
+  width: 850px;
 }
 
 .content {
@@ -59,7 +82,7 @@ a:hover, a:focus {
 section {
   border-left: $padding-xs solid $black;
   padding-left: $padding-m;
-  margin-top: $padding-m;
+  padding-top: 0.05px;//$padding-m;
 }
 
 
