@@ -117,7 +117,7 @@ input::-webkit-inner-spin-button {
 	padding: 0;
 	width: 100%;
 	height: 100%;
-	background: $white;
+  background: $white;
 	text-align: left;
 }
 
@@ -148,6 +148,7 @@ input::-webkit-inner-spin-button {
     border: 0px;
     overflow: hidden;
 		font-size: 0.85em;
+  	border-radius: $border-radius-s;
     background: $white url("../img/icon-select.svg") no-repeat 100% 50%;
 		border: 1px solid $light-grey;
 }
@@ -178,6 +179,14 @@ input::-webkit-inner-spin-button {
 
 .input--filled--empty .input__label--juro::before, .input--filled--empty {
 	border-color: $warning;
+}
+.input--filled--empty .input__label--juro {
+  background: #fff url("../img/icon-alert.svg") no-repeat;
+  background-position: right $padding-m center;
+}
+.input--filled .input__label--juro {
+  background: #fff url("../img/check.svg") no-repeat;
+  background-position: right $padding-m center;
 }
 
 .input__field--juro:focus + .input__label--juro .input__label-content--juro,
