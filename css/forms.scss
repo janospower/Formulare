@@ -203,6 +203,13 @@ input::-webkit-inner-spin-button {
 }
 
 .radio {
-	// display: inline-block;
+	margin-bottom: $padding-l;
+  display: grid;
 
+  grid-template-columns: $padding-l auto;
+  width: 100%;
+  line-height: 1.5;
+}
+.radio input {
+  margin-top: $padding-s;
 }
