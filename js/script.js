@@ -54,6 +54,7 @@ var two = document.getElementById("2");
 
 // Get the offset position of the navbar
 var sticky = navbar.offsetTop;
+var offs = two.offsetTop-150;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function myFunction() {
@@ -62,11 +63,11 @@ function myFunction() {
   } else {
     navbar.classList.remove("sticky");
   }
-  if (window.pageYOffset < two.offsetTop) {
+  if (window.pageYOffset < offs) {
     number.innerHTML = "1";
     title.innerHTML = "Kontaktdaten";
   }
-  else if (window.pageYOffset >= two.offsetTop) {
+  else if (window.pageYOffset >= offs) {
     number.innerHTML = "2";
     title.innerHTML = "Bankverbindung";
   }

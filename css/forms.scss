@@ -149,7 +149,9 @@ input::-webkit-inner-spin-button {
     overflow: hidden;
 		font-size: 1em;
   	border-radius: $border-radius-s;
-    background: $white url("../img/icon-select.svg") no-repeat 100% 50%;
+    background: $white url("../img/icon-select.svg") no-repeat;
+    background-position: right -15px center;
+    background-size: 50px;
 		border: 1px solid $light-grey;
 }
 
@@ -181,12 +183,14 @@ input::-webkit-inner-spin-button {
 	border-color: $warning;
 }
 .input--filled--empty .input__label--juro {
-  background: white url("../img/icon-alert.svg") no-repeat;
-  background-position: right $padding-m center;
+  background: white url("../img/icon-warning.svg") no-repeat;
+  background-position: right -10px center;
+  background-size: 50px;
 }
 .input--filled .input__label--juro {
   background: white url("../img/check.svg") no-repeat;
-  background-position: right $padding-m center;
+  background-position: right 0px center;
+  background-size: 50px;
 }
 
 .input__field--juro:focus + .input__label--juro .input__label-content--juro,

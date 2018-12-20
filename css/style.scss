@@ -35,12 +35,24 @@ h1 {
 .number {
   font-size: 2em;
   line-height: 1.3;
+  margin-left: 13px;
 }
 
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+.navigation {
+  position: fixed;
+  top: 40px;
+  left: calc( 50% - 600px - 150px );
+  width: 200px;
+  min-height: 300px;
+  background: white;
+  padding: $padding-m;
+  border-radius: $border-radius-s;
 }
 
 a {
