@@ -40,37 +40,44 @@
       classie.add( ev.target.parentNode, 'input--filled' );
     }
   }
+
+  // When the user scrolls the page, execute myFunction
+  window.onscroll = function() {myFunction()};
+
+  // Get the navbar
+  var navbar = document.getElementById("navbar");
+  var number = document.getElementById("number");
+  var title = document.getElementById("title");
+  var titles = document.getElementsByClassName("titles");
+  var navitems = document.getElementsByClassName("navitems");
+
+  var two = document.getElementById("2");
+
+  // Get the offset position of the navbar
+  var sticky = navbar.offsetTop;
+  var offs = two.offsetTop-150;
+
+  var sections = document.getElementsByClassName('content');
+
+  // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+
+    for (var i = 0; i < sections.length; i++) {
+      if (window.pageYOffset >= sections[i].offsetTop-150) {
+        number.innerHTML = i+1;
+        title.innerHTML = titles[i].innerHTML;
+        classie.add( sections[i], 'active' );
+        classie.add( navitems[i], 'active' );
+      }
+      else {
+        classie.remove( sections[i], 'active' );
+        classie.remove( navitems[i], 'active' );
+      }
+    }
+  }
 })();
-
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
-
-// Get the navbar
-var navbar = document.getElementById("navbar");
-var number = document.getElementById("number");
-var title = document.getElementById("title");
-
-var two = document.getElementById("2");
-
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop;
-var offs = two.offsetTop-150;
-
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-  if (window.pageYOffset < offs) {
-    number.innerHTML = "1";
-    title.innerHTML = "Kontaktdaten";
-    classie.remove( document.getElementsByClassName('content')[2], 'active' );
-  }
-  else if (window.pageYOffset >= offs) {
-    number.innerHTML = "2";
-    title.innerHTML = "Bankverbindung";
-    classie.add( document.getElementsByClassName('content')[2], 'active' );
-  }
-}

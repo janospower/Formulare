@@ -106,6 +106,12 @@ a:hover, a:focus {
   grid-template-columns: $grid auto $grid;
   display: grid;
 }
+.contentheader {
+	// padding: $padding-m;
+  margin-top: $padding-l;
+  grid-template-columns: $grid auto $grid;
+  display: grid;
+}
 
 li {
   list-style: none;
@@ -122,6 +128,15 @@ ul {
 }
 .active h2 {
   color: $primary;
+  font-weight: bold;
+}
+.active {
+    color: black;
+    font-weight: bold;
+}
+
+.navitems{
+  cursor: pointer;
 }
 
 section {
@@ -142,4 +157,24 @@ section {
 	.codrops-header h1 {
 		font-size: 2.8em;
 	}
+}
+
+@media print {
+ /* All your print styles go here */
+ *{
+   color: black !important;
+ }
+ body {
+   background-color: white !important;
+ }
+ .navigation {
+   display: none !important;
+ }
+ .active{
+   border-color: black;
+ }
+ .input__label-content {
+ 	// -webkit-transform: translate3d(0, -1em, 0) scale3d(0.75, 0.75, 1);
+ 	transform: $label-transform-to !important;
+ }
 }
