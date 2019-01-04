@@ -66,9 +66,11 @@ function myFunction() {
   if (window.pageYOffset < offs) {
     number.innerHTML = "1";
     title.innerHTML = "Kontaktdaten";
+    classie.remove( document.getElementsByClassName('content')[2], 'active' );
   }
   else if (window.pageYOffset >= offs) {
     number.innerHTML = "2";
     title.innerHTML = "Bankverbindung";
+    classie.add( document.getElementsByClassName('content')[2], 'active' );
   }
 }

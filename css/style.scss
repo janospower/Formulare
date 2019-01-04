@@ -107,6 +107,23 @@ a:hover, a:focus {
   display: grid;
 }
 
+li {
+  list-style: none;
+  padding-left: 0px;
+  margin-left: 0px;
+}
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.active section {
+  border-color: $primary;
+}
+.active h2 {
+  color: $primary;
+}
+
 section {
   border-left: $padding-xs solid $black;
   padding-left: $padding-m;
