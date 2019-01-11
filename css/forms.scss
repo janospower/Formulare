@@ -15,7 +15,7 @@ input::-webkit-inner-spin-button {
 	// max-width: 400px;
 	width: 100%;
 	vertical-align: top;
-	font-size: 20px;
+	font-size: $font-size;
 	line-height: 1;
 }
 
@@ -78,7 +78,7 @@ input::-webkit-inner-spin-button {
 	width: 40%;
 	color: $black;
 	font-weight: 400;
-	font-size: 0.85em;
+	font-size: $font-size;
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 	-webkit-touch-callout: none;
@@ -110,7 +110,7 @@ input::-webkit-inner-spin-button {
 	padding: 1.9em 1em 0;
 	width: 100%;
 	background: transparent;
-	font-size: 0.85em;
+	font-size: $font-size;
 }
 
 .input__label--juro {
@@ -147,7 +147,7 @@ input::-webkit-inner-spin-button {
 .select--style {
     border: 0px;
     overflow: hidden;
-		font-size: 1em;
+		font-size: $font-size;
   	border-radius: $border-radius-s;
     background: $white url("../img/icon-select.svg") no-repeat;
     background-position: right -15px center;
