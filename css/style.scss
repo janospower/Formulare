@@ -20,6 +20,10 @@ body {
     font-feature-settings: "kern"
 }
 
+p {
+  margin: 0px;
+}
+
 h1, h2, h3 {
 	font-weight: 600;
 	// font-size: 31px;
@@ -154,6 +158,22 @@ section {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 0px;
+}
+
+.explanation {
+  margin-bottom: $padding-m;
+}
+
+.textlink {
+  font-weight: bold;
+}
+.textlink:after {
+    content: "";
+    display: inline-block;
+    background: url("../img/icon-link.svg") no-repeat;
+    background-position: left 3px top;
+    width: 22px;
+    height: 13px;
 }
 
 @media screen and (max-width: 50em) {
