@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="de">
 	<head>
 		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Formulare</title>
 		<meta name="description" content="Web forms for HTW Berlin" />
@@ -20,11 +19,11 @@
 		<div class="navigation">
 			<h3>Navigation</h3>
 			<ul>
-				<li class="navitems">Kontaktdaten</li>
-				<li class="navitems">Bankverbindung</li>
-				<li class="navitems">Antragsgrund</li>
-				<li class="navitems">Finanzieller Bedarf</li>
-				<li class="navitems">Einkünfte</li>
+				<li class="navitems active"><a href="#anchor-1">Kontaktdaten</a></li>
+				<li class="navitems"><a href="#anchor-2">Bankverbindung</a></li>
+				<li class="navitems"><a href="#anchor-3">Antragsgrund</a></li>
+				<li class="navitems"><a href="#anchor-4">Finanzieller Bedarf</a></li>
+				<li class="navitems"><a href="#anchor-5">Einkünfte</a></li>
 			</ul>
 		</div>
 		<div class="container">
@@ -41,7 +40,7 @@
 				</div>
 			</div>
 			<div class="content active">
-				<h2 class="number">1</h2>
+				<h2 class="number" id="anchor-1">1</h2>
 				<div class="form">
 
 					<section>
@@ -182,7 +181,7 @@
 
 
 			<div class="content">
-				<h2 class="number" id="2">2</h2>
+				<h2 class="number" id="anchor-2">2</h2>
 				<div class="form">
 					<section>
 						<h2 class="titles">Bankverbindung</h2>
@@ -251,10 +250,15 @@
 
 
 			<div class="content">
-				<h2 class="number">3</h2>
+				<h2 class="number" id="anchor-3">3</h2>
 				<div class="form">
 					<section>
 						<h2 class="titles">Antragsgrund</h2>
+
+						<div class="explanation">
+							<p>Ich mache gemäß <a href="#" class="textlink">§ 2 Abs. 3 der Sozialfonds-Satzung<a> folgenden Antragsgrund geltend:</p>
+
+						</div>
 
 						<span class="input input--juro">
 							<div class="radio"><input type="radio" checked="checked" name="antragsgrund" value="" id="1"><label for="1">Anfertigung der Studienabschlussarbeit bereits länger als drei Monate vor dem Rückmeldezeitpunkt</label>  </div>
@@ -277,7 +281,7 @@
 
 
 			<div class="content">
-				<h2 class="number">4</h2>
+				<h2 class="number" id="anchor-4">4</h2>
 				<div class="form">
 					<section>
 						<h2 class="titles">Finanzieller Bedarf (§ 2 Abs. 4 der Sozialfonds-Satzung):</h2>
@@ -299,10 +303,10 @@ Gas):</label> </div>
 
 
 			<div class="content">
-				<h2 class="number">5</h2>
+				<h2 class="number" id="anchor-5">5</h2>
 				<div class="form">
 					<section>
-						<h2 class="titles">Einkünfte (§ 2 Abs. 5 der Sozialfonds-Satzung):</h2>
+						<h2 class="titles">Einkünfte (§ 2 Abs. 5 der Sozialfonds-Satzung):</h2>
 
 						<span class="input input--juro">
 							<div class="radio"><input type="radio" checked="checked" name="antragsgrund" value="" id="1"><label for="1">BAföG/Stipendien</label>  </div>

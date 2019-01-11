@@ -52,12 +52,15 @@ h1 {
   min-height: 300px;
   background: white;
   padding: $padding-m;
-  border-radius: $border-radius-s;
+}
+.navigation h3{
+  margin-bottom: $padding-s;
 }
 
 a {
 	text-decoration: none;
 	outline: none;
+  color: inherit;
 }
 
 a:hover, a:focus {
@@ -67,7 +70,6 @@ a:hover, a:focus {
 .container {
   background: $white;
 	margin: 40px auto;
-  border-radius: $border-radius;
 	width: 1000px;
 	overflow: hidden;
   padding: $padding-l;
@@ -130,9 +132,12 @@ ul {
   color: $primary;
   font-weight: bold;
 }
-.active {
+li.active{
     color: black;
     font-weight: bold;
+}
+.done {
+  color: $primary;
 }
 
 .navitems{
@@ -145,7 +150,11 @@ section {
   padding-top: 0.05px;//$padding-m;
 }
 
-
+.content section {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 0px;
+}
 
 @media screen and (max-width: 50em) {
 	.codrops-header {
@@ -159,10 +168,13 @@ section {
 	}
 }
 
+
+// ARCHIVE VERSION
 @media print {
  /* All your print styles go here */
  *{
    color: black !important;
+   float:none !important;
  }
  body {
    background-color: white !important;
@@ -171,10 +183,26 @@ section {
    display: none !important;
  }
  .active{
-   border-color: black;
+   border-color: black !important;
  }
  .input__label-content {
  	// -webkit-transform: translate3d(0, -1em, 0) scale3d(0.75, 0.75, 1);
  	transform: $label-transform-to !important;
+ }
+ .half {
+   width: 100%;
+ }
+ .input, .input__field--juro, .input__label--juro::before {
+   border: none !important;
+ }
+ .content section {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: $padding-m;
+   page-break-inside: avoid;
+ }
+ h2{
+   page-break-before: always;
+   // break-before: always;
  }
 }

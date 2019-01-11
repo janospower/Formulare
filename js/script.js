@@ -67,17 +67,20 @@
       navbar.classList.remove("sticky");
     }
 
+    var active = 0;
+
     for (var i = 0; i < sections.length; i++) {
       if (window.pageYOffset >= sections[i].offsetTop-150) {
-        number.innerHTML = i+1;
-        title.innerHTML = titles[i].innerHTML;
-        classie.add( sections[i], 'active' );
-        classie.add( navitems[i], 'active' );
+        active = i;
       }
-      else {
-        classie.remove( sections[i], 'active' );
-        classie.remove( navitems[i], 'active' );
-      }
+      classie.remove( sections[i], 'active' );
+      classie.remove( navitems[i], 'active' );
     }
+
+    number.innerHTML = active+1;
+    title.innerHTML = titles[active].innerHTML;
+    classie.add( sections[active], 'active' );
+    classie.add( navitems[active], 'active' );
+    classie.add( navitems[active], 'done' );
   }
 })();
