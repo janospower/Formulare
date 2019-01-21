@@ -27,6 +27,23 @@ body {
   // padding: 0px!important;
 }
 
+.hidden {
+  height: 0px;
+  display: none;
+  margin: 0px;
+  padding: 0px;
+}
+.visible {
+  height: auto;
+  display: block;
+}
+
+.ui-widget, .ui-widget * {
+  font-family: inherit;
+  background: $white!important;
+  background-color: $white!important;
+}
+
 p {
   margin: 0px;
 }

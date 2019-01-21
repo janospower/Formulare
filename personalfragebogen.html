@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="de">
 	<head>
+
+		<script type="text/javascript">
+		    var datefield=document.createElement("input")
+		    datefield.setAttribute("type", "date")
+		    if (datefield.type!="date"){ //if browser doesn't support input type="date", load files for jQuery UI Date Picker
+		        document.write('<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />\n')
+		        document.write('<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"><\/script>\n')
+		        document.write('<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"><\/script>\n')
+		    }
+		</script>
+
+		<script>
+		if (datefield.type!="date"){ //if browser doesn't support input type="date", initialize date picker widget:
+		    jQuery(function($){ //on document.ready
+		        $('#Seit').datepicker();
+		    })
+		}
+		</script>
+
+
+
+
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Personalfragebogen</title>
@@ -464,9 +486,30 @@
 							<p>Weitere Tätigkeit außerhalb der HTW Berlin?</p>
 						</div>
 						<span class="input input--juro">
-							<div class="radio"><input type="radio" name="weitere" checked="checked" value="" id="radio-11"><label for="radio-11">Ja</label><div class="check"></div>  </div>
+							<div class="radio" id="ja"><input type="radio" name="weitere" value="" id="radio-11"><label for="radio-11">Ja</label><div class="check"></div>  </div>
 							<div class="radio"><input type="radio" name="weitere" value="" id="radio-12"><label for="radio-12">Nein</label><div class="check"></div>  </div>
 						</span>
+
+						<div class="hidden" id="ifYes">
+							<span class="input input--juro">
+								<input
+									class="input__field input__field--juro"
+									type="date"
+									id="Seit"
+								/>
+								<label class="input__label input__label--juro" for="Seit">
+									<span class="input__label-content input__label-content--juro">Seit</span>
+								</label>
+							</span>
+
+							<div class="explanation">
+								<p>Die Beschäftigung ist</p>
+							</div>
+							<span class="input input--juro">
+								<div class="radio" id="ja"><input type="radio" name="beschäftigung" value="" id="radio-13"><label for="radio-13">Befristet</label><div class="check"></div>  </div>
+								<div class="radio"><input type="radio" name="beschäftigung" value="" id="radio-14"><label for="radio-14">Unbefristet</label><div class="check"></div>  </div>
+							</span>
+						</div>
 
 					</section>
 				</div>
