@@ -29,7 +29,7 @@
   }
 
   function onInputBlur( ev ) {
-    if( ev.target.value.trim() === '' || ev.target.value.trim() === 'Geschlecht' ) {
+    if( (" " + ev.target.parentNode.className + " " ).indexOf( " opt " ) < 0 && (ev.target.value.trim() === '' || ev.target.value.trim() === 'Geschlecht') ) {
       classie.remove( ev.target.parentNode, 'input--filled' );
       classie.remove( ev.target.parentNode, 'input--focus' );
       classie.add( ev.target.parentNode, 'input--filled--empty' );
