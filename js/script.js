@@ -159,7 +159,7 @@ autocomplete(document.getElementById("titel"), titles);
   var titles = document.getElementsByClassName("titles");
   var navitems = document.getElementsByClassName("navitems");
 
-  var two = document.getElementById("2");
+  var two = document.getElementById("anchor-2");
 
   // Get the offset position of the navbar
   var sticky = navbar.offsetTop;

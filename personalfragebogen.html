@@ -384,6 +384,75 @@
 			</div>
 
 
+			<div class="content">
+				<h2 class="number" id="anchor-3">3</h2>
+				<div class="form">
+
+					<section>
+						<h2 class="titles">Bankverbindung</h2>
+
+						<span class="input input--juro">
+							<input
+								class="input__field input__field--juro"
+								type="text"
+								id="IBAN"
+								placeholder="DE12 1234 1234 12"
+								style="text-transform:uppercase"
+								onkeyup="
+									this.value = this.value.replace(/[^\dA-Z]/g, '').replace(/(.{4})/g, '$1 ').trim();
+									if(this.value.length > 16) {
+										document.getElementById('BIC').focus();
+										document.getElementById('BIC').value = 'PBNKDEFF';
+										document.getElementById('Geldinstitut').focus();
+										document.getElementById('Geldinstitut').value = 'Postbank';
+									};
+									"
+							/>
+							<label class="input__label input__label--juro" for="IBAN">
+								<span class="input__label-content input__label-content--juro">IBAN</span>
+							</label>
+						</span>
+
+						<span class="input input--juro half">
+							<input
+								class="input__field input__field--juro"
+								type="text"
+								id="BIC"
+								placeholder="PBNKDEFF"
+								style="text-transform:uppercase"
+							/>
+							<label class="input__label input__label--juro" for="BIC">
+								<span class="input__label-content input__label-content--juro">BIC</span>
+							</label>
+						</span>
+
+						<span class="input input--juro">
+							<input
+								class="input__field input__field--juro"
+								type="text"
+								id="Geldinstitut"
+							/>
+							<label class="input__label input__label--juro" for="Geldinstitut">
+								<span class="input__label-content input__label-content--juro">Geldinstitut</span>
+							</label>
+						</span>
+
+						<span class="input input--juro">
+							<input
+								class="input__field input__field--juro"
+								type="text"
+								id="Kontoinhaber"
+							/>
+							<label class="input__label input__label--juro" for="Kontoinhaber">
+								<span class="input__label-content input__label-content--juro">Kontoinhaber</span>
+							</label>
+						</span>
+
+					</section>
+				</div>
+			</div>
+
+
 
 
 
