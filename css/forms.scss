@@ -19,6 +19,10 @@ input::-webkit-inner-spin-button {
 	line-height: 1;
 }
 
+.top {
+  z-index: 100;
+}
+
 .input input::-webkit-input-placeholder { /* WebKit browsers */
 		color: transparent;
 }

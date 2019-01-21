@@ -58,8 +58,8 @@ h1 {
 .navigation {
   position: fixed;
   top: 40px;
-  left: calc( 50% - 620px - 150px );
-  width: 220px;
+  left: calc( 50% - 650px - 150px );
+  width: 250px;
   // min-height: 300px;
   background: white;
   padding: $padding-l;
@@ -67,6 +67,22 @@ h1 {
 }
 .navigation h3{
   margin-bottom: $padding-s;
+}
+
+.navigation li {
+  position: relative;
+}
+.navigation li:before {
+  content: " ";
+  width: 7px;
+  height: 7px;
+  background-color: $medium-grey;
+  border-radius: 100%;
+  position: absolute;
+  top: 10px;
+}
+.navigation a {
+  padding-left: 12px;
 }
 
 a {
@@ -238,4 +254,40 @@ section {
    page-break-before: always;
    // break-before: always;
  }
+}
+
+
+
+
+
+.autocomplete-items {
+  position: absolute;
+  border: 2px solid $light-grey;
+  border-radius: $border-radius-s;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 250px;
+  color: $dark-grey;
+  overflow: scroll;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: $border-radius-s;
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: $light-grey;
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: $blue !important;
+  color: #ffffff;
 }
