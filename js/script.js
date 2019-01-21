@@ -156,6 +156,14 @@ autocomplete(document.getElementById("titel"), titles);
     }
   }
 
+  var rect = document.getElementById("p-1").getBoundingClientRect();
+  document.getElementById("p-1").addEventListener("click", hints);
+  function hints(i) {
+      classie.add( document.getElementById("h-1"), 'visible' );
+      document.getElementById("h-1").style.top = (rect.top + 40) + "px";
+      document.getElementById("h-1").style.left = (rect.left + 40) + "px";
+  };
+
   // When the user scrolls the page, execute myFunction
   window.onscroll = function() {myFunction()};
 

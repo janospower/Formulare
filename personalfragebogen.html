@@ -38,6 +38,11 @@
 		<![endif]-->
 	</head>
 	<body>
+		<div class="hidden hintcont" id="h-1">
+			<div class="speech"></div>
+			<div class="hint">Hier steht ein Hinweis zu der Sozialversicherungsnummer</div>
+		</div>
+
 		<div class="navigation">
 			<h3>Navigation</h3>
 			<ul>
@@ -291,6 +296,7 @@
 								autocorrect="off"
 								placeholder="65 170839 J 003"
 							/>
+							<div class="prompt" id="p-1"></div>
 							<label class="input__label input__label--juro" for="phone">
 								<span class="input__label-content input__label-content--juro">Sozialversicherungsnummer</span>
 							</label>
@@ -491,7 +497,7 @@
 						</span>
 
 						<div class="hidden" id="ifYes">
-							<span class="input input--juro">
+							<span class="input input--juro s">
 								<input
 									class="input__field input__field--juro"
 									type="date"
@@ -505,9 +511,9 @@
 							<div class="explanation">
 								<p>Die Beschäftigung ist</p>
 							</div>
-							<span class="input input--juro">
+							<span class="input input--juro lean">
 								<div class="radio" id="ja"><input type="radio" name="beschäftigung" value="" id="radio-13"><label for="radio-13">Befristet</label><div class="check"></div>  </div>
-								<div class="radio"><input type="radio" name="beschäftigung" value="" id="radio-14"><label for="radio-14">Unbefristet</label><div class="check"></div>  </div>
+								<div class="radio lean"><input type="radio" name="beschäftigung" value="" id="radio-14"><label for="radio-14">Unbefristet</label><div class="check"></div>  </div>
 							</span>
 						</div>
 
